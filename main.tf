@@ -38,7 +38,7 @@ module "ecs-fargate" {
   version = "~> 6.1.0"
 
   name_prefix        = "ecs-fargate-acoop"
-  vpc_id             = aws_vpc.TF_acoop.id
+  vpc_id             = aws_vpc.acoop.id
   private_subnet_ids = [aws_subnet.private_subnet_1a_acoop.id, aws_subnet.private_subnet_1b_acoop.id]
 
   cluster_id = aws_ecs_cluster.cluster.id
